@@ -34,12 +34,20 @@ namespace Curso_em_C__com_VictorLima
             Console.WriteLine("Escreva seu nome: ");
             string nome = Console.ReadLine();
             Console.WriteLine("Seu nome eh: ", nome);
-            //Console.WriteLine(nome);
+            Console.WriteLine(nome);
             Console.WriteLine("Seu RG eh: ");
             Console.WriteLine(RG);
+
+            int adicao = 20 + 20;
+            int multiplicacao = 20 * 3;
+            int divisao = 20 / 2;
+            float divisaoo = 5.0f / 2;
+
+            Console.WriteLine(adicao);
+            Console.WriteLine(multiplicacao);
+            Console.WriteLine(divisao);
+            Console.WriteLine(divisaoo);
             
-
-
             Console.ReadLine();
         }
     }
