@@ -9,6 +9,10 @@ namespace Curso_em_C__com_VictorLima
 {
     class Program
     {
+        //enum -> enumeracao
+        enum Cor { Azul = 33, Rosa = 28, Roxo = 10, Preto = 111, Cinza = 55 }
+
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -73,8 +77,26 @@ namespace Curso_em_C__com_VictorLima
                 Console.WriteLine("Vc nao dentro das condições para entrar na festa de graça");
             }
 
-            ExibirMsg();
-            GerarPreco(50, "Lamen");
+            int contador = 0;
+            while( contador < 10)
+            {
+                Console.WriteLine("Rodando o While!");
+            }
+            Console.WriteLine("FIM DA LINHA!");
+
+            string[] palavras = { "Milena", "Sayuri", "Hayakawa" };
+            foreach(string palavra in palavras)
+            {
+                Console.WriteLine("FOREACH RODANDO");
+            }
+            Console.WriteLine("Fim do FOREACH");
+
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("Fim do FOR");
 
             //array
             string[] produtos = new string[5]
@@ -88,10 +110,35 @@ namespace Curso_em_C__com_VictorLima
 
             Console.WriteLine(produtos[2]);
 
-                Console.ReadLine();
+
+            //switch
+            string cor = "Azul";
+            switch (cor)
+            {
+                case "Rosa":
+                    Console.WriteLine("Sua cor favorita eh Rosa!");
+                    break;
+                case "Preto":
+                    Console.WriteLine("Sua cor favorita eh Preto!");
+                    break;
+                default:
+                    Console.WriteLine("Sua cor favorita eu nao conheço!");
+                    break;
+            }
+
+            ExibirMsg();
+            GerarPreco(50, "Lamen");
+
+            Cor CorFavorita = Cor.Rosa;
+            Console.WriteLine(CorFavorita);
+            Console.WriteLine((int)CorFavorita);
+            Console.WriteLine((Cor)111);
+
+
+            Console.ReadLine();
         }
 
-
+        
         //funcao
         // TipoDeRetorno NomeDaFuncao(TipoParametro parametro)
         static void ExibirMsg()
