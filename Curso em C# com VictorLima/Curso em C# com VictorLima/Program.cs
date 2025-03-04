@@ -47,8 +47,65 @@ namespace Curso_em_C__com_VictorLima
             Console.WriteLine(multiplicacao);
             Console.WriteLine(divisao);
             Console.WriteLine(divisaoo);
-            
-            Console.ReadLine();
+
+            //loops
+
+            if (10 > 200)
+            {
+                Console.WriteLine("Eh verdade");
+            }
+            else
+            {
+                Console.WriteLine("Eh mentira");
+            }
+
+            Console.WriteLine("Digite seu gênero: ");
+            string genero = Console.ReadLine().ToLower();
+            Console.WriteLine("Digite sua idade: ");
+            int idade = Convert.ToInt32(Console.ReadLine());
+
+            if (genero == "mulher" && idade >= 25)
+            {
+                Console.WriteLine("Entrada confirmada na festa de graça!");
+            }
+            else
+            {
+                Console.WriteLine("Vc nao dentro das condições para entrar na festa de graça");
+            }
+
+            ExibirMsg();
+            GerarPreco(50, "Lamen");
+
+            //array
+            string[] produtos = new string[5]
+            {
+                "Stardew Valley",
+                "Hogwarts Legacy",
+                "Resident Evil",
+                "The Legend of Zelda",
+                "Pokemon"
+            };
+
+            Console.WriteLine(produtos[2]);
+
+                Console.ReadLine();
+        }
+
+
+        //funcao
+        // TipoDeRetorno NomeDaFuncao(TipoParametro parametro)
+        static void ExibirMsg()
+        {
+            Console.WriteLine("Estou usando funcoes");
+            Console.WriteLine("Seja bem-vindo!");
+
+
+        }
+
+        static void GerarPreco(int valor, string nome) //valor so funciona dentro dessa funcao
+        {
+            Console.WriteLine("Nome do produto: " + nome);
+            Console.WriteLine("R$" + valor);
         }
     }
 }
